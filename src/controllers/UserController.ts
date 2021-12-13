@@ -1,12 +1,12 @@
 // interface 
-import {Request, Response } from 'express' 
-import { getRepository } from 'typeorm';
-import { User } from '../models/User';
+import { Request, Response } from 'express';
+import { getCustomRepository } from 'typeorm';
+import { UsersRepository } from '../repositories/UsersRepositories';
 class UserController{
     async create(Request: Request, Response: Response){
         const {name, email} = Request.body;
 
-        const userRepositorie = getRepository(User);
+        const userRepositorie = getCustomRepository(UsersRepository);
         const userAlreadyExists = await userRepositorie.findOne({
             email
         })
@@ -22,10 +22,10 @@ class UserController{
         await userRepositorie.save(user)
 
 
-        return Response.json(user);
+        return Response.status(201).json(user);
     }
 }
 
-export{
+export {
     UserController
-}
+};
