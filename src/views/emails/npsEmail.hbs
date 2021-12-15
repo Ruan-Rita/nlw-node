@@ -1,0 +1,62 @@
+<style>
+    .container{
+        width: 800px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .value{
+        padding: 10px;
+        background: #8257e6;
+        color: white;
+        border-radius: 6px;
+        width: 15px;
+        text-align: center;
+        text-decoration: none;
+
+    }
+    .level{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+
+    }
+    .answers{
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+<section class="container">
+    <label for="">Olá, <strong>{{name}}</strong>! Tudo bem?</label>
+    <h3>
+        {{title}}
+    </h3>
+    <br>
+    <div class="level">
+        <span>Pouco provável</span>
+        <span>Muito provável</span>
+    </div>
+
+
+    <strong>{{description}}</strong>
+    <div class="answers">
+        <a class="value" href="http://" target="_blank">1</a>
+        <a class="value" href="http://" target="_blank">2</a>
+        <a class="value" href="http://" target="_blank">3</a>
+        <a class="value" href="http://" target="_blank">4</a>
+        <a class="value" href="http://" target="_blank">5</a>
+        <a class="value" href="http://" target="_blank">6</a>
+        <a class="value" href="http://" target="_blank">7</a>
+        <a class="value" href="http://" target="_blank">8</a>
+        <a class="value" href="http://" target="_blank">9</a>
+        <a class="value" href="http://" target="_blank">10</a>
+    </div>
+
+
+    <br>
+    <br>
+    <strong>Sua opnião é muito importante para nós!</strong>
+    <h3>Equipe | <strong>NLW</strong></h3>
+</section>
